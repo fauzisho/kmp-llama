@@ -3,6 +3,7 @@ This repository is a simple demo for how to use llama.cpp server and mobile appl
 
 <div align="center">
   <img src="demo.gif" alt="KMP-Llama Demo" width="300"/>
+  <img src="demo2.gif" alt="KMP-Llama Demo 2" width="300"/>
 </div>
 
 ## How to setup
