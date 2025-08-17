@@ -97,8 +97,7 @@ VisionRequest(
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
----
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
 
 
 Please use this bibtex if you want to cite this repository in your publications:
