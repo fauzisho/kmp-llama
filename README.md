@@ -1,6 +1,10 @@
 # 🎥 KMP-Llama: SmolVLM Camera App
 This repository is a simple demo for how to use llama.cpp server and mobile application with SmolVLM 500M to get real-time object detection
 
+<div align="center">
+  <img src="demo.gif" alt="KMP-Llama Demo" width="300"/>
+</div>
+
 ## How to setup
 1. Install [llama.cpp](https://github.com/ggml-org/llama.cpp)
 2. Run ` llama-server -hf ggml-org/SmolVLM-500M-Instruct-GGUF --host 0.0.0.0 --port 8080`  
