@@ -83,7 +83,10 @@ VisionRequest(
 - [ ] Real-time object tracking
 - [ ] AR overlay integration
 - [ ] Cloud sync and sharing
-
+      
+### **Future (v3.0)**
+- [ ] mobile local LLM (inspired by https://github.com/a-ghorbani/pocketpal-ai)
+      
 ## 🤝 Contributing
 
 1. Fork the repository
