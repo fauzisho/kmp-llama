@@ -64,14 +64,6 @@ VisionRequest(
 | **iOS** | ✅ | 🔄 AVFoundation | ✅ Ktor | **UI Ready** |
 | **Desktop** | ✅ | 🔄 Webcam | ✅ Ktor | **UI Ready** |
 
-## 🛠️ Development
-
-### **Adding New Features**
-1. **UI Changes**: Modify `commonMain/App.kt`
-2. **Camera Features**: Update platform-specific `CameraPreview.kt`
-3. **API Changes**: Edit `commonMain/ApiService.kt`
-4. **Platform Code**: Add to respective `platformMain/` directories
-
 ## 🎯 Roadmap
 
 ### **Immediate (v1.1)**
@@ -100,4 +92,16 @@ VisionRequest(
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ---
 
+
+Please use this bibtex if you want to cite this repository in your publications:
+
+    @misc{kmpllama,
+       author = {Sholichin, Fauzi},
+       title = {KMP-Llama: SmolVLM Camera App},
+       year = {2025},
+       publisher = {GitHub},
+       journal = {GitHub repository},
+       howpublished = {\url{https://github.com/fauzisho/kmp-llama}},
+      }
+      
 **Built with ❤️ using Kotlin Multiplatform**
