@@ -1,39 +1,17 @@
 # 🎥 KMP-Llama: SmolVLM Camera App
+This repository is a simple demo for how to use llama.cpp server and mobile application with SmolVLM 500M to get real-time object detection
 
-A **modern, cross-platform** camera AI analysis application built with **Kotlin Multiplatform** and **Compose Multiplatform**, featuring real-time SmolVLM integration for intelligent image understanding.
-
-## ✨ Features
-
-### 🎨 **Modern UI Design**
-- **Dark theme with glassmorphism effects**
-- **Gradient backgrounds and smooth animations**
-- **Material 3 design system with custom theming**
-- **Responsive layout with rounded corners and shadows**
-- **Real-time loading indicators and progress feedback**
-
-### 📱 **Cross-Platform Support**
-- **Android** (API 24+) - Full CameraX integration with live preview
-- **iOS** (x64, ARM64, Simulator ARM64) - AVFoundation ready (placeholder)
-- **Desktop/JVM** - Webcam support ready (placeholder)
-
-### 🤖 **AI Integration**
-- **SmolVLM API integration** with Ktor HTTP client
-- **Real-time image analysis** with configurable intervals
-- **Type-safe JSON serialization** with Kotlinx Serialization
-- **Intelligent error handling** and network resilience
-
-### 📸 **Camera Features**
-- **Live camera preview** with modern styling
-- **Real-time frame capture** for analysis
-- **Analysis overlay** with glassmorphism effects
-- **Professional camera controls** and feedback
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Android Studio with KMP plugin
-- Kotlin 2.2.0+
-- Java 11+
+## How to setup
+1. Install [llama.cpp](https://github.com/ggml-org/llama.cpp)
+2. Run ` llama-server -hf ggml-org/SmolVLM-500M-Instruct-GGUF --host 0.0.0.0 --port 8080`  
+   Note: you may need to add `-ngl 99` to enable GPU (if you are using NVidia/AMD/Intel GPU)  
+   Note (2): You can also try other models [here](https://github.com/ggml-org/llama.cpp/blob/master/docs/multimodal.md)
+3. Run ` ifconfig | grep "inet" `to get the LAN (Wi-Fi) address
+   Example: inet 127.0.0.1 netmask 0xff000000
+   inet 192.168.0.244 netmask 0xffffff00 broadcast 192.168.0.255
+5. Run KMP App project (eg. Android)
+6. Optionally change the instruction (for example, make it returns JSON)
+7. Click on "Start" and enjoy
 
 ### Clone and Run
 ```bash
@@ -49,61 +27,6 @@ cd kmp-llama
 # iOS
 open iosApp/iosApp.xcodeproj
 ```
-
-## 🏗️ Architecture
-
-### 🔧 **Technology Stack**
-```kotlin
-// Core Framework
-Kotlin Multiplatform 2.2.0
-Compose Multiplatform 1.8.2
-
-// UI & Design
-Material 3 Design System
-Material Icons Extended
-Custom Dark Theme + Gradients
-
-// Networking
-Ktor 3.0.2 (Multiplatform HTTP)
-Kotlinx Serialization 1.7.3
-
-// Camera
-CameraX 1.4.1 (Android)
-AVFoundation (iOS - planned)
-Webcam Libraries (Desktop - planned)
-```
-
-### 📦 **Module Structure**
-```
-composeApp/src/
-├── commonMain/           # Shared business logic
-│   ├── App.kt           # Modern UI with glassmorphism
-│   ├── ApiService.kt    # Ktor-based SmolVLM client
-│   └── Platform.kt      # Platform abstraction
-├── androidMain/         # Android-specific
-│   ├── CameraPreview.kt # CameraX live preview
-│   ├── CameraCapture.kt # Real-time image capture
-│   └── MainActivity.kt  # Permissions & lifecycle
-├── iosMain/            # iOS-specific (ready)
-└── jvmMain/           # Desktop-specific (ready)
-```
-
-## 🎨 UI Showcase
-
-### **Modern Interface Features:**
-- 🌌 **Gradient backgrounds** with depth and dimension
-- 🔮 **Glassmorphism effects** on analysis overlays
-- 📱 **Card-based layout** with elevation and shadows
-- 🎯 **Smart typography** with proper hierarchy
-- ⚡ **Smooth animations** and state transitions
-- 🎨 **Professional color scheme** with accessibility
-
-### **Smart Controls:**
-- 🔧 **Server configuration** with validation
-- 💬 **Dynamic question input** with multi-line support
-- ⏱️ **Interval selection** with dropdown menu
-- 🚀 **Start/Stop toggle** with visual feedback
-- 📊 **Real-time response display** with scrolling
 
 ## 🔌 API Integration
 
@@ -149,15 +72,6 @@ VisionRequest(
 3. **API Changes**: Edit `commonMain/ApiService.kt`
 4. **Platform Code**: Add to respective `platformMain/` directories
 
-### **Testing**
-```bash
-# Run tests
-./gradlew :composeApp:testDebugUnitTest
-
-# Check all platforms
-./gradlew :composeApp:check
-```
-
 ## 🎯 Roadmap
 
 ### **Immediate (v1.1)**
@@ -184,14 +98,6 @@ VisionRequest(
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **JetBrains** for Kotlin Multiplatform and Compose
-- **SmolVLM** team for the vision language model
-- **Material Design** for the beautiful design system
-- **CameraX** team for robust camera APIs
-
 ---
 
 **Built with ❤️ using Kotlin Multiplatform**
