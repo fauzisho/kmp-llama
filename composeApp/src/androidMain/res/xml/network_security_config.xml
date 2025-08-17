@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Allow cleartext traffic for local development -->
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        <domain includeSubdomains="true">10.0.0.0/8</domain>
+        <domain includeSubdomains="true">172.16.0.0/12</domain>
+        <domain includeSubdomains="true">192.168.0.0/16</domain>
+        
+        <!-- Add your specific server IP if needed -->
+        <domain includeSubdomains="true">192.168.0.244</domain>
+        
+        <!-- Allow other common local network ranges -->
+        <domain includeSubdomains="true">0.0.0.0</domain>
+    </domain-config>
+    
+    <!-- For production, you should use HTTPS and remove this configuration -->
+    <!-- <base-config cleartextTrafficPermitted="false" /> -->
+</network-security-config>
