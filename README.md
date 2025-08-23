@@ -6,7 +6,7 @@ This repository is a simple demo for how to use llama.cpp server and mobile appl
   <img src="demo2.gif" alt="KMP-Llama Demo 2" width="300"/>
 </div>
 
-## How to setup
+## How to setup on Laptop <> Android
 1. Install [llama.cpp](https://github.com/ggml-org/llama.cpp)
 2. Run ` llama-server -hf ggml-org/SmolVLM-500M-Instruct-GGUF --host 0.0.0.0 --port 8080`  
    Note: you may need to add `-ngl 99` to enable GPU (if you are using NVidia/AMD/Intel GPU)  
@@ -18,6 +18,13 @@ This repository is a simple demo for how to use llama.cpp server and mobile appl
 6. Optionally change the instruction (for example, make it returns JSON)
 7. Click on "Start" and enjoy
 
+## How to setup on Local Android
+1. Install Termux from Google Play
+2. pkg update && pkg upgrade
+3. pkg install cmake clang make git wget
+4. git clone https://github.com/ggerganov/llama.cpp.git cd llama.cpp
+5. mkdir build cd build cmake .. cmake  - -build . - -config Release
+6. ./bin/llama-server -hf ggml-org/SmolVLM-500M-Instruct-GGUF
 ### Clone and Run
 ```bash
 git clone <repository-url>
